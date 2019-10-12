@@ -43,7 +43,7 @@
   win_lineinfile:
     path: '{{ chocolatey_repo_folder }}\temp\{{ package.name }}.{{ package.version }}\tools\chocolateyInstall.ps1'
     insertafter: '^  fileType '
-    line: '  File64         	 = Get-Item $toolsPath\{{ package.url | urlsplit("path") | basename }}'
+    line: '  File64              = Get-Item $toolsPath\{{ package.url | urlsplit("path") | basename }}'
 
 - name: remove urls
   win_lineinfile:
